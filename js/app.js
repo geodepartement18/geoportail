@@ -5,6 +5,8 @@ import Map from "https://js.arcgis.com/4.34/@arcgis/core/Map.js";
 import MapView from "https://js.arcgis.com/4.34/@arcgis/core/views/MapView.js";
 import { CONFIG } from "./config.js";
 
+const itemGallery = document.getElementById("item-gallery");
+
 // Function to query for portal items.
 function listItems(portal) {
         // Create query parameters for the portal search.
