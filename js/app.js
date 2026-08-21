@@ -1,5 +1,5 @@
 import Portal from "https://js.arcgis.com/4.34/@arcgis/core/portal/Portal.js";
-import PortalQueryParams from "https://js.arcgis.com/4.34/@arcgis/core/portal/PortalQueryParams.js;
+import PortalQueryParams from "https://js.arcgis.com/4.34/@arcgis/core/portal/PortalQueryParams.js";
 import FeatureLayer from "https://js.arcgis.com/4.34/@arcgis/core/layers/FeatureLayer.js";
 import Map from "https://js.arcgis.com/4.34/@arcgis/core/Map.js";
 import MapView from "https://js.arcgis.com/4.34/@arcgis/core/views/MapView.js";
