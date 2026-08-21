@@ -18,7 +18,7 @@ function listItems(portal) {
         portal.queryItems(queryParams).then(createGallery);
 }
 
- // Function to build the UI for the gallery to display queried portal items.
+// Function to build the UI for the gallery to display queried portal items.
       function createGallery(items) {
         items.results.forEach((item) => {
           // Create a card for each item and add a thumbnail, title, subtitle,
@@ -49,6 +49,20 @@ function listItems(portal) {
           openItemAction.addEventListener("click", (event) => {
             window.open(event.target.value.itemPageUrl);
           });
+
+          card.appendChild(thumbnail);
+          card.appendChild(title);
+          card.appendChild(type);
+          card.appendChild(views);
+          card.appendChild(openItemAction);
+
+          // Add each card to a new div with styling and add to the calcite panel.
+          const div = document.createElement("item");
+          div.style = "float: left; padding: 10px; display: inline-block;";
+          div.appendChild(card);
+          itemGallery.appendChild(div);
+        });
+      }
 
 function openAlert(){
     alert("liste des items ok !");
