@@ -19,7 +19,7 @@ import { CONFIG } from "./config.js";
     }
 
 async function load() {
-    portal=new Portal({url:CONFIG.portalUrl});
+    var portal=new Portal({url:CONFIG.portalUrl});
     portal.authMode="anonymous";
     await portal.load();
 
