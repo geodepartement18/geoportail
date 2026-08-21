@@ -9,7 +9,7 @@ import { CONFIG } from "./config.js";
     function queryItems(portal) {
         // Create query parameters for the portal search.
         const queryParams = new portal.queryItems({
-          query: group{a249c493cd4d44c39c6565d996cb83d6},
+          query: `group:${CONFIG.groupId}`,
           sortField: "num-views",
           sortOrder: "desc",
           num: 20,          
