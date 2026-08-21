@@ -17,7 +17,9 @@ import { CONFIG } from "./config.js";
         // Query the items based on the queryParams created from the portal.
         portal.queryItems(queryParams).then(createGallery);
     }
-
+function openAlert(){
+    alert("portal load");
+}
 function load() {
     var portal = new Portal({url:CONFIG.portalUrl});
     portal.authMode="anonymous";
