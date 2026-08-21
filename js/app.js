@@ -20,10 +20,10 @@ import { CONFIG } from "./config.js";
 function openAlert(){
     alert("portal load");
 }
-function load() {
+async function load() {
     var portal = new Portal({url:CONFIG.portalUrl});
     portal.authMode="anonymous";
-    portal.load().then(openAlert);
+    await portal.load().then(openAlert);
 }
 
 load();
