@@ -18,10 +18,10 @@ import { CONFIG } from "./config.js";
         portal.queryItems(queryParams).then(createGallery);
     }
 
-async function load() {
+function load() {
     var portal = new Portal({url:CONFIG.portalUrl});
     portal.authMode="anonymous";
-    await portal.load();
+    portal.load();
 
     listItems();
 }
