@@ -23,7 +23,8 @@ function load() {
     portal.authMode="anonymous";
     portal.load();
 
-    listItems();
+    $("loader").classList.add("d-none");
+
 }
 
 load();
