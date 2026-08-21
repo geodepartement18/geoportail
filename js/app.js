@@ -21,10 +21,7 @@ import { CONFIG } from "./config.js";
 function load() {
     var portal = new Portal({url:CONFIG.portalUrl});
     portal.authMode="anonymous";
-    portal.load();
-
-    listItems();
-
+    portal.load().then(listItems);
 }
 
 load();
