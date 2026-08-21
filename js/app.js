@@ -6,7 +6,7 @@ import MapView from "https://js.arcgis.com/4.34/@arcgis/core/views/MapView.js";
 import { CONFIG } from "./config.js";
 
 // Function to query for portal items.
-    function queryItems() {
+    function queryItems(portal) {
         // Create query parameters for the portal search.
         const queryParams = new portal.queryItems({
           query: `group:${CONFIG.groupId}`,
@@ -19,7 +19,7 @@ import { CONFIG } from "./config.js";
     }
 
 async function load() {
-    var portal=new Portal({url:CONFIG.portalUrl});
+    var portal = new Portal({url:CONFIG.portalUrl});
     portal.authMode="anonymous";
     await portal.load();
 
