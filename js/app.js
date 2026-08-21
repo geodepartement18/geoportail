@@ -6,9 +6,9 @@ import MapView from "https://js.arcgis.com/4.34/@arcgis/core/views/MapView.js";
 import { CONFIG } from "./config.js";
 
 // Function to query for portal items.
-    function listItems(portal) {
+    function listItems() {
         // Create query parameters for the portal search.
-        const queryParams = new portal.queryItems({
+        const queryParams = portal.queryItems({
           query: `group:${CONFIG.groupId}`,
           sortField: "num-views",
           sortOrder: "desc",
@@ -23,7 +23,7 @@ function load() {
     portal.authMode="anonymous";
     portal.load();
 
-    $("loader").classList.add("d-none");
+    listItems();
 
 }
 
