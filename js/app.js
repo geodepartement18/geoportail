@@ -23,7 +23,7 @@ function openAlert(){
 function load() {
     var portal = new Portal({url:CONFIG.portalUrl});
     portal.authMode="anonymous";
-    portal.load().then(listItems);
+    portal.load().then(openAlert);
 }
 
 load();
