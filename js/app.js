@@ -15,10 +15,10 @@ import { CONFIG } from "./config.js";
           num: 20,          
         });
         // Query the items based on the queryParams created from the portal.
-        portal.queryItems(queryParams).then(createGallery);
+        portal.queryItems(queryParams).then(openAlert);
     }
 function openAlert(){
-    alert("portal load");
+    alert("liste des items ok !");
 }
 async function load() {
     var portal = new Portal({url:CONFIG.portalUrl});
